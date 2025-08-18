@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects | DevPort</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">DevPort</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="design-thinking.html">Design Process</a></li>
+                    <li><a href="global-goals.html">Global Goals</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                    <li><a href="behind-the-scenes.html">Behind the Scenes</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="portfolio-intro">
+            <div class="container">
+                <h1>My Projects</h1>
+                <p>Here are some of my recent works that showcase my skills and creativity.</p>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web Design</button>
+                    <button class="filter-btn" data-filter="app">Applications</button>
+                    <button class="filter-btn" data-filter="other">Other</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects">
+            <div class="container">
+                <div class="project-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="assets/images/project1.jpg" alt="E-commerce website project">
+                        </div>
+                        <div class="project-info">
+                            <h3>E-Commerce Website</h3>
+                            <p>A fully responsive online store with product filtering and cart functionality.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <button class="btn project-details-btn">View Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card" data-category="app">
+                        <div class="project-image">
+                            <img src="assets/images/project2.jpg" alt="Task management application">
+                        </div>
+                        <div class="project-info">
+                            <h3>Task Manager App</h3>
+                            <p>An interactive task management application with drag-and-drop functionality.</p>
+                            <div class="project-tech">
+                                <span>JavaScript</span>
+                                <span>Local Storage</span>
+                                <span>CSS Grid</span>
+                            </div>
+                            <button class="btn project-details-btn">View Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card" data-category="other">
+                        <div class="project-image">
+                            <img src="assets/images/project3.jpg" alt="Weather dashboard application">
+                        </div>
+                        <div class="project-info">
+                            <h3>Weather Dashboard</h3>
+                            <p>A weather application that fetches data from a public API and displays forecasts.</p>
+                            <div class="project-tech">
+                                <span>API Integration</span>
+                                <span>JavaScript</span>
+                                <span>Responsive Design</span>
+                            </div>
+                            <button class="btn project-details-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Modal -->
+        <div class="project-modal" id="projectModal">
+            <div class="modal-content">
+                <button class="close-modal">&times;</button>
+                <div class="modal-body">
+                    <img src="" alt="" class="modal-image">
+                    <div class="modal-text">
+                        <h2 class="modal-title">Project Title</h2>
+                        <p class="modal-description">Project description goes here.</p>
+                        <div class="modal-tech-used">
+                            <h3>Technologies Used:</h3>
+                            <ul class="tech-list"></ul>
+                        </div>
+                        <div class="modal-links">
+                            <a href="#" class="btn" target="_blank">Live Demo</a>
+                            <a href="#" class="btn btn-outline" target="_blank">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
