@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Dev Portfolio</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">My Portfolio</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="design-thinking.html">Design Process</a></li>
+                    <li><a href="global-goals.html">Global Goals</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                    <li><a href="behind the curtain.html">Behind the curtain</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="behind-intro">
+            <div class="container">
+                <h1>Behind the Scenes</h1>
+                <p>A look at how this portfolio website was built</p>
+            </div>
+        </section>
+
+        <section class="development-process">
+            <div class="container">
+                <div class="tab-content active" id="planning">
+                    <h2><span class="highlight">File Structure Planning</span></h2>
+                    <div class="hero-image">
+                        <img src="Images & Videos/6.png" alt="Illustration of a developer at work" width="400">
+                    </div>
+                </div>
+
+                <div class="tab-content" id="design">
+                    <h2><span class="highlight">Design Phase</span></h2>
+                    <p>Created mockups and style guides to establish visual consistency across the site.</p>
+                    <div class="design-elements">
+                        <div class="color-palette">
+                            <h3><span class="highlight">Color Palette</span></h3>
+                            <div class="hero-image">
+                                <img src="Images & Videos/7.png" alt="Illustration of a developer at work" width="400">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="tab content" id="coding">
+                <h2><span class="highlight">CSS Grid Implementation</span></h2>
+                <div class="hero-image">
+                    <img src="Images & Videos/8.png" alt="Illustration of a developer at work" width="400">
+                </div>
+                <div class="hero-image">
+                    <img src="Images & Videos/9.png" alt="Illustration of a developer at work" width="400">
+                </div>
+            </div>
+
+            <div class="tab content" id="coding">
+                <h2><span class="highlight">JavaScript Modal Function</span></h2>
+                <div class="hero-image">
+                    <img src="Images & Videos/10.png" alt="Illustration of a developer at work" width="400">
+                </div>
+            </div>
+
+            <div class="tab content" id="coding">
+                <h2><span class="highlight">HTML Structure</span></h2>
+                <div class="hero-image">
+                    <img src="Images & Videos/11.png" alt="Illustration of a developer at work" width="400">
+                </div>
+            </div>
+        </section>
+
+        <section class="challenges">
+            <div class="container">
+                <h2><span class="highlight">Challenges & Solutions</span></h2>
+                <div class="challenge-cards">
+                    <div class="challenge-card">
+                        <h3><span class="highlight">Modal Windows</span></h3>
+                        <p><strong>Chllenge:</strong> Demonstrate the card in both the "All Projects" and other three separate ones.</p>
+                        <p><strong>Solution:</strong> Used modal class and the name should be the same.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="challenges">
+            <div class="container">
+                <h2><span class="highlight">Developer Tools Usage</span></h2>
+                <p>VSCode & Deepseek</p>
+            </div>
+        </section>
+
+        <section class="key learnings">
+            <div class="container">
+                <h2><span class="highlight">Key Learnings</span></h2>
+                <ul>
+                    <li>Understanding the importance of planning and design in web development.</li>
+                    <li>Gaining proficiency in CSS Grid and Flexbox for layout design.</li>
+                    <li>Learning to implement JavaScript for interactive elements.</li>
+                    <li>Utilizing developer tools effectively for debugging and optimization.</li>
+                </ul>
+                <h2><span class="highlight">Reflection</span></h2>
+                <p>
+                    To tell the truth, it might be the most difficult task I met in the Computer Science Course learning. However, developing this portfolio website has been an incredibly valuable learning experience that allowed me to apply and expand my web development skills. I wrote the code step by step and built the website. Throughout the process, Visual Studio Code give me much help. By learning knowledge and exercising, I created a professional, accessible, and responsive showcase of my abilities.
+                    I began by thoroughly analyzing the project requirements and applying design thinking principles. The ideation process led to multiple wireframes and style concepts before settling on a clean, professional design with a blue and red color scheme for visual appeal and accessibility.
+                    One of the most frustrating challenges I encountered was linking my portfolio.html to index.html. Despite multiple attempts, the navigation simply wouldn’t work—clicking the "Portfolio" link in the header did nothing, or worse, led to a 404 error. At first, I thought it was a simple file path issue, but after checking and rechecking, the problem persisted. I spent hours debugging, trying different approaches:
+                    A)Absolute vs. Relative Paths – Initially, I used href="/portfolio.html", which failed because my local development environment didn’t recognize the root directory. Switching to href="portfolio.html" (relative path)
+                    B)Case Sensitivity – I discovered that some systems (like GitHub Pages) treat filenames as case-sensitive. My file was named Portfolio.html, but the link used portfolio.html, causing a mismatch.
+                    C)Browser Cache Issues – Sometimes, old cached versions of the page interfered, so I had to hard-refresh (Ctrl+F5) to see changes.
+                    This experience taught me the importance of precise file referencing and how small oversights can lead to major roadblocks.
+                    Another significant challenge was implementing the project filtering system in the portfolio section. I solved this by using data attributes and event delegation in JavaScript, which proved more efficient than individual event listeners. The mobile navigation menu required careful attention to accessibility, particularly ensuring proper keyboard navigation and ARIA attributes. Creating the "Behind the Scenes" tabs helped me better understand DOM manipulation and state management in vanilla JavaScript.
+                    This project has been instrumental in developing my skills and confidence as a web developer. It pushed me to find solutions independently while also recognizing when to seek help. Seeing my progress from initial struggles to a fully functional portfolio has been incredibly rewarding. The experience has motivated me to continue learning and improving, with plans to expand this portfolio as I tackle more advanced projects in the future.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="accessibility.html">Accessibility</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>yxycrystal111@gmail.com</p>
+                    <p>(+86) 18917802606</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -2,8 +2,8 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav u1');
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav ul');
 
     if (menuToggle && navMenu) {
         menuToggle.addEventListener('click', function() {
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Close modal when clicking outside content
     document.addEventListener('click', function(e) {
-        const modal = document.querySelector('.modal');
+        const modal = document.querySelectorAll('.modal');
         modal.forEach(modal => {
             if (e.target === modal) {
                 closeModal(modal.id);
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Open modal function (used in protfolio page)
-function opeanModal(modalId) {
+function openModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.style.display = 'block';

@@ -1,0 +1,161 @@
+/* Perspective Tabs */
+.goal-title {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.goal-text {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin: 3rem 0;
+    padding: 2rem;
+    width: 1200px;
+}
+
+.goal-hero {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin: 3rem 0;
+    padding: 2rem;
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius);
+}
+
+.goal-iage img {
+    width: 150px;
+    height: auto;
+}
+
+.perspective-tabs {
+    display: flex;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab-button {
+    padding: 0.8rem 1.5rem;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    font-weight: 600;
+    color: #555;
+}
+
+.tab-button.active {
+    color: #0066cc;
+    border-bottom-color: #0066cc;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.targets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.target-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+    transition: var(--transition);
+}
+
+.target-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.target-card h4 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Pro/Con Analysis */
+.pro-con {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.pro {
+    padding: 0.5rem;
+    background: rgba(0, 200, 100, 0.1);
+    border-left: 3px solid #00c864;
+}
+
+.con {
+    padding: 0.5rem;
+    background: rgba(200, 50, 50, 0.1);
+    border-left: 3px solid #c80000;
+}
+
+/* Critical View */
+.critical-view {
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.critique-point {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Debate Section */
+.design-debate {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: #f0f0f0;
+    border-radius: 8px;
+}
+
+.opinions {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+blockquote {
+    font-style: italic;
+    padding: 1rem;
+    border-left: 3px solid #0066cc;
+    background: white;
+}
+
+cite {
+    display: block;
+    margin-top:0.5rem;
+    font-style: normal;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .goal-hero {
+        flex-direction: column;
+        align-items: cneter;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .action-btn {
+        width: 100%;
+    }
+}
+

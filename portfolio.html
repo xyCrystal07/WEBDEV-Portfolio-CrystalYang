@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects | DevPort</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/portfolio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <header>
         <div class="container">
-            <div class="logo">DevPort</div>
+            <div class="logo"><My Portfolio></div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -18,7 +20,7 @@
                     <li><a href="design-thinking.html">Design Process</a></li>
                     <li><a href="global-goals.html">Global Goals</a></li>
                     <li><a href="accessibility.html">Accessibility</a></li>
-                    <li><a href="behind-the-scenes.html">Behind the Scenes</a></li>
+                    <li><a href="behind the curtain.html">Behind the curtain</a></li>
                 </ul>
                 <button class="mobile-menu-toggle" aria-label="Toggle menu">
                     <i class="fas fa-bars"></i>
@@ -27,104 +29,156 @@
         </div>
     </header>
 
-    <main>
+    <main class="container">
         <section class="portfolio-intro">
             <div class="container">
-                <h1>My Projects</h1>
-                <p>Here are some of my recent works that showcase my skills and creativity.</p>
-                <div class="filter-buttons">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="web">Web Design</button>
-                    <button class="filter-btn" data-filter="app">Applications</button>
-                    <button class="filter-btn" data-filter="other">Other</button>
-                </div>
-            </div>
-        </section>
+                <h1>My Portfolio</h1>
+                <p>Here are some of my projects that show myself.</p>
 
-        <section class="projects">
-            <div class="container">
-                <div class="project-grid">
+                <div class="portfolio-filter">
+                    <button class="filter-btn active" data-filter="all">All Proects</button>
+                    <button class="filter-btn" data-filter="hobby">Hobby</button>
+                    <button class="filter-btn" data-filter="travel">Travel</button>
+                    <button class="filter-btn" data-filter="advertisement">Advertisement Video</button>
+                </div>
+
+                <div class="portfolio-grid">
                     <!-- Project 1 -->
-                    <div class="project-card" data-category="web">
-                        <div class="project-image">
-                            <img src="assets/images/project1.jpg" alt="E-commerce website project">
-                        </div>
-                        <div class="project-info">
-                            <h3>E-Commerce Website</h3>
-                            <p>A fully responsive online store with product filtering and cart functionality.</p>
-                            <div class="project-tech">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
+                    <div class="portfolio-item" data-category = "hobby">
+                        <div class="portfolio-card">
+                            <img src="Images & Videos/2.png" alt="Website screenshot" class = "hobby">
+                            <div class="portfolio-overlay">
+                                <h3>My Hobby</h3>
+                                <p>I'm a fan of a K-POP male group.</p>
+                                <button class="btn btn-small" onclick="openModal('modal')">View Project</button>
                             </div>
-                            <button class="btn project-details-btn">View Details</button>
                         </div>
                     </div>
 
                     <!-- Project 2 -->
-                    <div class="project-card" data-category="app">
-                        <div class="project-image">
-                            <img src="assets/images/project2.jpg" alt="Task management application">
-                        </div>
-                        <div class="project-info">
-                            <h3>Task Manager App</h3>
-                            <p>An interactive task management application with drag-and-drop functionality.</p>
-                            <div class="project-tech">
-                                <span>JavaScript</span>
-                                <span>Local Storage</span>
-                                <span>CSS Grid</span>
+                    <div class="portfolio-item" data-category="travel">
+                        <div class="portfolio-card">
+                            <img src="Images & Videos/3.png" alt="Sakura" class="travel">
+                            <div class="portfolio-overlay">
+                                <h3>Travel</h3>
+                                <p>I love travelling and recording the moment of beauty.</p>
+                                <button class="btn btn-small" onclick="openModal('modal2')">View Project</button>
                             </div>
-                            <button class="btn project-details-btn">View Details</button>
                         </div>
                     </div>
 
                     <!-- Project 3 -->
-                    <div class="project-card" data-category="other">
-                        <div class="project-image">
-                            <img src="assets/images/project3.jpg" alt="Weather dashboard application">
-                        </div>
-                        <div class="project-info">
-                            <h3>Weather Dashboard</h3>
-                            <p>A weather application that fetches data from a public API and displays forecasts.</p>
-                            <div class="project-tech">
-                                <span>API Integration</span>
-                                <span>JavaScript</span>
-                                <span>Responsive Design</span>
+                    <div class="portfolio-item" data-category="advertisement">
+                        <div class="portfolio-card">
+                            <img src="Images & Videos/4.png" alt="Advertisememt of Apple" class="portfolio-image">
+                            <div class="portfolio-overlay">
+                                <h3>TV Advertisement Video</h3>
+                                <p>This is an TV Advertisement Video for Apple products I did with my groupmates in English Studies 12.</p>
+                                <button class="btn btn-small" onclick="openModal('modal3')">View Project</button>
                             </div>
-                            <button class="btn project-details-btn">View Details</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+    </main>
 
-        <!-- Project Modal -->
-        <div class="project-modal" id="projectModal">
-            <div class="modal-content">
-                <button class="close-modal">&times;</button>
-                <div class="modal-body">
-                    <img src="" alt="" class="modal-image">
-                    <div class="modal-text">
-                        <h2 class="modal-title">Project Title</h2>
-                        <p class="modal-description">Project description goes here.</p>
-                        <div class="modal-tech-used">
-                            <h3>Technologies Used:</h3>
-                            <ul class="tech-list"></ul>
-                        </div>
-                        <div class="modal-links">
-                            <a href="#" class="btn" target="_blank">Live Demo</a>
-                            <a href="#" class="btn btn-outline" target="_blank">View Code</a>
-                        </div>
-                    </div>
+    <!-- Modal Windows -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal')">&times;</span>
+            <h2>My Hobby</h2>
+            <div class="modal-body">
+                <img src="Images & Videos/2.png" alt="Full screenshot of the website">
+                <div class="modal-text">
+                    <p>This is a website I created to showcase my hobby of being a K-POP fan. Korean pop music is well known for its colorful music videos, well-trained idols, and energetic dance performances. I loved to watch their performance videos and they give me power.</p>
+                    
+                    <h3> Several Male groups/actors I like</h3>
+                    <ul>
+                        <li>Ricky from ZeroBaseOne</li>
+                        <li>NCT 127 & NCT Dream</li>
+                        <li>Kai from EXO</li>
+                        <li>Wanna One</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+            <h2>Travel</h2>
+            <div class="modal-body">
+                <img src="Images & Videos/3.png" alt="Sakura">
+                <div class="modal-text">
+                    <p>I love travellig. I always travel wih my parents and friends. This is a photo I took during my trip to Korea. The cherry blossoms were in full bloom, creating a breathtaking view.</p>
+                    <h3>Places I visited:</h3>
+                    <ul>
+                        <li>Victoria, British Columbia, Canada</li>
+                        <li>Seoul, Korea</li>
+                        <li>Singapore</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+            <h2>Advertisement Video we make for Apple</h2>
+            <div class="modal-body">
+                <video src="Images & Videos/Apple Advertisement Video.mp4" autoplay="autoplay" muted="muted" controls="controls" loop="loop">
+                </video>
+
+                <div class="modal-text">
+                    <h3>Introduction</h3>
+                    <p>This is an advertisement video we created for Apple products. We advertise the product of iPhone 13 Pro Max.</p>
+
+                    <h3>Devices we used in Advertisement Video</h3>
+                    <ul>
+                        <li>Logos: Help owners find their headphones</li>
+                        <li>Pathos: Most of people have experienced losing their headphones </li>
+                        <li>Ethos: List Performance parameter to increase its credibility</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
-        <!-- Same footer as index.html -->
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="accessibility.html">Accessibility</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>yxycrystal111@gmail.com</p>
+                    <p>(+86) 18917802606</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/portfolio.js"></script>
 </body>
 </html>

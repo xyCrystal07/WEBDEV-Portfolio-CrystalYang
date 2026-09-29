@@ -123,6 +123,9 @@ header {
     box-shadow: var(--shadow);
 }
 
+main {
+    padding-top: 80px; /* Adjust based on header height */
+}
 header .container {
     display: flex;
     justify-content: space-between;
@@ -277,7 +280,7 @@ nav ul li a:hover:after {
     background-color: var(--accent-color);
 }
 
-.ctn .btn:hover {
+.cta.btn:hover {
     background-color: var(--accent-color);
 }
 
@@ -313,7 +316,7 @@ footer {
     background-color: var(--accent-color);
 }
 
-.fotter-section u1 {
+.footer-section ul {
     list-style: none;
 }
 .footer-section ul li {
@@ -368,18 +371,18 @@ footer {
         flex-direction: column;
     }
 
-    nav u1 {
+    nav ul {
         flex-direction: column;
         align-items: center;
         margin-top: 1rem;
         display: none;
     }
 
-    nav u1.active {
+    nav ul.active {
         display: flex;
     }
 
-    nav u1 li {
+    nav ul li {
         margin: 0.5rem 0;
     }
 
