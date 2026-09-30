@@ -48,6 +48,7 @@ I followed a design thinking process while developing the portfolio:
 
 ## Project Structure
 
+```text
 WEBDEV-Portfolio-CrystalYang/
 ├── Images & Videos/
 ├── js/
@@ -59,6 +60,7 @@ WEBDEV-Portfolio-CrystalYang/
 ├── accessibility.html
 ├── behind the curtain.html
 └── README.md
+```
 
 ## Running the Project
 
